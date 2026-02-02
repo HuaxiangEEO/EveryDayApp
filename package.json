@@ -1,0 +1,17 @@
+{
+  "name": "everyday-app",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "每日编程实践项目集合",
+  "scripts": {
+    "dev:interview": "cd projects/interview-questions && npm run dev",
+    "dev:chess": "cd projects/chinese-chess && npm run dev",
+    "build:interview": "cd projects/interview-questions && npm run build",
+    "build:chess": "cd projects/chinese-chess && npm run build",
+    "install:all": "cd projects/interview-questions && npm install && cd ../chinese-chess && npm install"
+  },
+  "workspaces": [
+    "projects/*"
+  ]
+}

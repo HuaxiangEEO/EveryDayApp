@@ -1,0 +1,219 @@
+.chess-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-lg);
+}
+
+.board-container {
+  position: relative;
+  background: var(--board-bg);
+  border: 3px solid var(--board-line);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 500px;
+  min-height: 500px;
+  aspect-ratio: 9 / 10;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.pieces-layer {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  width: calc(100% - calc(var(--spacing-md) * 2));
+  height: calc(100% - calc(var(--spacing-md) * 2));
+  pointer-events: none;
+  z-index: 5;
+}
+
+.pieces-layer > * {
+  pointer-events: auto;
+}
+
+.board-row {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  position: relative;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.board-row:last-child {
+  border-bottom: none;
+}
+
+.board-cell {
+  width: 11.11%; /* 100% / 9 */
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  border-right: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.board-cell.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.board-cell:last-child {
+  border-right: none;
+}
+
+.board-cell:hover {
+  background-color: rgba(139, 69, 19, 0.1);
+}
+
+.board-cell.selected {
+  background-color: rgba(37, 99, 235, 0.2);
+}
+
+.board-cell.valid-move::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(37, 99, 235, 0.3);
+  border: 2px solid var(--primary-color);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* 交叉点 */
+.intersection {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--board-line);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* 九宫格样式 */
+.board-cell.palace {
+  border: 1px solid rgba(139, 69, 19, 0.3);
+}
+
+/* 九宫斜线 */
+.diagonal-line {
+  position: absolute;
+  background-color: var(--board-line);
+  z-index: 1;
+}
+
+.diagonal-top-right {
+  width: 71px;
+  height: 2px;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  top: 0;
+  left: 0;
+}
+
+.diagonal-top-left {
+  width: 71px;
+  height: 2px;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+  top: 0;
+  right: 0;
+}
+
+.diagonal-bottom-right {
+  width: 71px;
+  height: 2px;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  bottom: 0;
+  left: 0;
+}
+
+.diagonal-bottom-left {
+  width: 71px;
+  height: 2px;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+  bottom: 0;
+  right: 0;
+}
+
+/* 楚河汉界分隔线 */
+.river-divider {
+  position: absolute;
+  top: 50%;
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+  height: 2px;
+  background: linear-gradient(to right, 
+    transparent 0%, 
+    var(--board-line) 20%, 
+    var(--board-line) 80%, 
+    transparent 100%
+  );
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* 楚河汉界 */
+.river-label {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--board-line);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.river-top {
+  top: 50%;
+  left: -60px;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+}
+
+.river-bottom {
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .board-container {
+    max-width: 100%;
+    padding: var(--spacing-sm);
+  }
+  
+  .river-label {
+    font-size: 1rem;
+  }
+  
+  .river-top {
+    left: -40px;
+  }
+  
+  .river-bottom {
+    right: -40px;
+  }
+}

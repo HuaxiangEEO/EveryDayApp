@@ -1,0 +1,85 @@
+.replay-controls {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.replay-controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.replay-controls-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.btn-exit-replay {
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-exit-replay:hover {
+  background: #5a6268;
+}
+
+.replay-controls-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.btn-replay {
+  padding: 8px 16px;
+  font-size: 18px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: 48px;
+}
+
+.btn-replay:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.btn-replay:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.replay-info {
+  text-align: center;
+}
+
+.replay-step-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.replay-step-info strong {
+  color: #007bff;
+  font-size: 16px;
+}
+
+.replay-move-info {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
