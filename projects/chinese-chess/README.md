@@ -113,6 +113,11 @@ npm run build
 - **Vite** - 构建工具
 - **CSS3** - 样式和动画
 
+## 相关文档
+
+- [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md) - 项目结构详细说明
+- [DESIGN_REPLAY.md](./DESIGN_REPLAY.md) - 复盘功能设计文档
+
 ## 核心算法
 
 ### AI算法

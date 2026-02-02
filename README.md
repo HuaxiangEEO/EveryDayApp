@@ -38,6 +38,8 @@ npm install
 npm run dev
 ```
 
+**详细文档**: 查看 [README.md](projects/interview-questions/README.md)
+
 ### 2. 中国象棋对战游戏 🎮
 
 **位置**: `projects/chinese-chess/`
@@ -59,10 +61,7 @@ npm install
 npm run dev
 ```
 
-**详细文档**:
-- [README.md](projects/chinese-chess/README.md) - 项目说明和使用指南
-- [PROJECT_STRUCTURE.md](projects/chinese-chess/PROJECT_STRUCTURE.md) - 项目结构说明
-- [DESIGN_REPLAY.md](projects/chinese-chess/DESIGN_REPLAY.md) - 复盘功能设计文档
+**详细文档**: 查看 [README.md](projects/chinese-chess/README.md)
 
 ## 快速开始
 
