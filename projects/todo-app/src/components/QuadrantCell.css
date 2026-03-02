@@ -1,68 +1,103 @@
+/* 四象限语义色：暖色系变体，与主色陶土协调 */
 .quadrant-cell {
-  border: 1px solid #eee;
-  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 200px;
+  background: var(--color-bg-elevated);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-fast);
 }
-.quadrant-1 { border-left: 4px solid #e53935; }
-.quadrant-2 { border-left: 4px solid #fb8c00; }
-.quadrant-3 { border-left: 4px solid #1e88e5; }
-.quadrant-4 { border-left: 4px solid #43a047; }
+
+.quadrant-cell:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.quadrant-1 { border-left: 4px solid #c45c4a; }
+.quadrant-2 { border-left: 4px solid #b85c38; }
+.quadrant-3 { border-left: 4px solid #6b8f71; }
+.quadrant-4 { border-left: 4px solid #7a8a6f; }
+
 .quadrant-cell-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 12px;
-  background: #fafafa;
-  border-bottom: 1px solid #eee;
+  padding: 12px 16px;
+  background: var(--color-bg-sidebar);
+  border-bottom: 1px solid var(--color-border-light);
 }
+
 .quadrant-cell-title {
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  font-family: var(--font-display);
+  color: var(--color-text);
 }
+
 .quadrant-cell-actions {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
+
 .quadrant-cell-add-input {
-  width: 120px;
-  padding: 4px 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 12px;
+  width: 130px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: var(--font-body);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
 }
+
+.quadrant-cell-add-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
 .quadrant-cell-add-btn {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border: none;
-  background: #1a73e8;
+  background: var(--color-accent);
   color: #fff;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   font-size: 18px;
   line-height: 1;
+  transition: background var(--transition-fast);
 }
+
+.quadrant-cell-add-btn:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
 .quadrant-cell-body {
   flex: 1;
   overflow: auto;
-  padding: 8px;
+  padding: 10px;
 }
+
 .quadrant-group {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
+
 .quadrant-group-title {
-  margin: 0 0 6px;
-  font-size: 12px;
+  margin: 0 0 8px;
+  font-size: 11px;
   font-weight: 600;
-  color: #888;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-body);
 }
+
 .quadrant-cell-empty {
-  padding: 24px;
+  padding: 28px;
   text-align: center;
-  color: #999;
+  color: var(--color-text-subtle);
   font-size: 13px;
 }
