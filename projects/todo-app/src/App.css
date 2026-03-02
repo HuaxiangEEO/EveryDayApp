@@ -1,0 +1,43 @@
+.app-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #f5f5f5;
+  color: #666;
+}
+.app-retry {
+  padding: 8px 16px;
+  border: 1px solid #1a73e8;
+  border-radius: 6px;
+  background: #fff;
+  color: #1a73e8;
+  font-size: 14px;
+  cursor: pointer;
+}
+.app-retry:hover {
+  background: #e8f4ff;
+}
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+.app-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #fff;
+}
+.app-error {
+  padding: 8px 16px;
+  background: #fdecea;
+  color: #c5221f;
+  font-size: 13px;
+}
+.app-body {
+  flex: 1;
+  overflow: auto;
+}

@@ -1,0 +1,68 @@
+.quadrant-cell {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+.quadrant-1 { border-left: 4px solid #e53935; }
+.quadrant-2 { border-left: 4px solid #fb8c00; }
+.quadrant-3 { border-left: 4px solid #1e88e5; }
+.quadrant-4 { border-left: 4px solid #43a047; }
+.quadrant-cell-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+.quadrant-cell-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+.quadrant-cell-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.quadrant-cell-add-input {
+  width: 120px;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.quadrant-cell-add-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #1a73e8;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+.quadrant-cell-body {
+  flex: 1;
+  overflow: auto;
+  padding: 8px;
+}
+.quadrant-group {
+  margin-bottom: 12px;
+}
+.quadrant-group-title {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+}
+.quadrant-cell-empty {
+  padding: 24px;
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+}

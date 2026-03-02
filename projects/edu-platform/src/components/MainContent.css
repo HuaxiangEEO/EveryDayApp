@@ -1,0 +1,161 @@
+.main-content {
+  flex: 1;
+  min-width: 0;
+  overflow: auto;
+  background: var(--bg-main);
+  padding: 20px;
+}
+
+.main-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.main-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.main-action-btn:hover {
+  border-color: var(--accent);
+  background: rgba(0,122,255,0.04);
+}
+
+.main-action-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: var(--text-secondary);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+.main-action-hot {
+  background: var(--hot-bg);
+  color: #fff;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+.main-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.main-tab {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  border-radius: var(--radius);
+}
+
+.main-tab:hover {
+  color: var(--text-primary);
+  background: rgba(0,0,0,0.04);
+}
+
+.main-tab--active {
+  color: var(--accent);
+  font-weight: 500;
+  background: rgba(0,122,255,0.08);
+}
+
+.main-tabs-view {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+}
+
+.main-view-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 10h16M4 14h16M4 18h16'/%3E%3C/svg%3E") center/18px no-repeat;
+}
+
+.main-view-btn:last-child {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z'/%3E%3C/svg%3E");
+}
+
+.main-view-btn--active {
+  background-color: rgba(0,122,255,0.1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23007aff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 10h16M4 14h16M4 18h16'/%3E%3C/svg%3E");
+}
+
+.main-view-btn:last-child.main-view-btn--active {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23007aff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z'/%3E%3C/svg%3E");
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.main-grid--list {
+  grid-template-columns: 1fr;
+}
+
+.main-grid--list .course-card:not(.course-card--join) {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-grid--list .course-card-cover {
+  width: 180px;
+  min-width: 180px;
+  height: 100px;
+}
+
+.main-grid--list .course-card-body {
+  flex: 1;
+}
+
+.course-card--join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  border: 2px dashed var(--border);
+  background: #fafafa;
+  text-decoration: none;
+  color: var(--text-secondary);
+}
+
+.course-card--join:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0,122,255,0.04);
+}
+
+.course-card-join-icon {
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.course-card--join:hover .course-card-join-icon {
+  color: var(--accent);
+}
+
+.course-card-join-label {
+  font-size: 14px;
+}

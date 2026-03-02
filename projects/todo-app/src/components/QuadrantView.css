@@ -1,0 +1,18 @@
+.quadrant-view {
+  padding: 16px;
+  overflow: auto;
+  height: 100%;
+}
+.quadrant-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  min-height: 400px;
+}
+@media (max-width: 768px) {
+  .quadrant-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}

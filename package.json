@@ -7,9 +7,13 @@
   "scripts": {
     "dev:interview": "cd projects/interview-questions && npm run dev",
     "dev:chess": "cd projects/chinese-chess && npm run dev",
+    "dev:edu": "cd projects/edu-platform && npm run dev",
+    "dev:todo": "cd projects/todo-app && npm run dev",
     "build:interview": "cd projects/interview-questions && npm run build",
     "build:chess": "cd projects/chinese-chess && npm run build",
-    "install:all": "cd projects/interview-questions && npm install && cd ../chinese-chess && npm install"
+    "build:edu": "cd projects/edu-platform && npm run build",
+    "build:todo": "cd projects/todo-app && npm run build",
+    "install:all": "cd projects/interview-questions && npm install && cd ../chinese-chess && npm install && cd ../edu-platform && npm install && cd ../todo-app && npm install"
   },
   "workspaces": [
     "projects/*"

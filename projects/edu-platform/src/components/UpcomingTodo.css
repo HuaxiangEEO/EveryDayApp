@@ -1,0 +1,140 @@
+.upcoming-todo {
+  width: 320px;
+  min-width: 320px;
+  background: var(--bg-right);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.upcoming-todo-header {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.upcoming-todo-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.upcoming-todo-badge {
+  background: var(--badge-bg);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.upcoming-todo-more {
+  margin-left: auto;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.upcoming-todo-body {
+  flex: 1;
+  overflow: auto;
+  padding: 12px 20px;
+}
+
+.upcoming-todo-group {
+  margin-bottom: 20px;
+}
+
+.upcoming-todo-group:last-child {
+  margin-bottom: 0;
+}
+
+.upcoming-todo-group-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.todo-card {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  background: #fff;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
+}
+
+.todo-card:last-child {
+  margin-bottom: 0;
+}
+
+.todo-card-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+}
+
+.todo-card-icon--video {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23007aff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z'/%3E%3C/svg%3E") center/20px no-repeat rgba(0,122,255,0.1);
+}
+
+.todo-card-icon--doc {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'/%3E%3C/svg%3E") center/20px no-repeat #e8e8ed;
+}
+
+.todo-card-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.todo-card-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.todo-card-course {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.todo-card-hint {
+  font-size: 12px;
+  color: var(--hot-bg);
+  margin-bottom: 8px;
+}
+
+.todo-card-btn {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  background: #fff;
+}
+
+.todo-card-btn:hover {
+  background: #f5f5f7;
+}
+
+.todo-card-btn--primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.todo-card-btn--primary:hover {
+  background: var(--accent-hover);
+}

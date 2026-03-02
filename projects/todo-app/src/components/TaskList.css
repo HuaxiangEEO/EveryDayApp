@@ -1,0 +1,25 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.task-list-groups {
+  flex: 1;
+  overflow: auto;
+  padding: 8px 0;
+}
+.task-group {
+  margin-bottom: 16px;
+}
+.task-group-title {
+  margin: 0 16px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+}
+.task-list-empty {
+  padding: 40px 16px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
