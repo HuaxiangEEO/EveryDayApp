@@ -20,7 +20,10 @@ function EnvError() {
 }
 
 function Root() {
-  const [AppModule, setAppModule] = useState<{ App: React.ComponentType; AuthProvider: React.ComponentType } | null>(null)
+  const [AppModule, setAppModule] = useState<{
+    App: React.ComponentType
+    AuthProvider: React.ComponentType<{ children: React.ReactNode }>
+  } | null>(null)
 
   useEffect(() => {
     if (!hasSupabaseEnv) return
