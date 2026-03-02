@@ -112,8 +112,8 @@ export default function TaskEditModal(props: TaskEditModalProps) {
       dueTime: dueTime.trim() || null,
       important,
       urgent,
-      recurrence: recurrence || '',
-      recurrenceEnd: recurrence ? recurrenceEnd : 'never',
+      recurrence: (recurrence || '') as RecurrenceType,
+      recurrenceEnd: recurrence ? recurrenceEnd : ('never' as RecurrenceEndType),
       recurrenceEndDate: recurrenceEnd === 'date' && recurrenceEndDate.trim() ? recurrenceEndDate.trim() : null,
       recurrenceEndCount: recurrenceEnd === 'count' && countNum != null && !isNaN(countNum) && countNum > 0 ? countNum : null,
     }

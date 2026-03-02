@@ -1,6 +1,6 @@
 import type { RecurrenceType, RecurrenceEndType } from '../types/task'
 import { useTasks } from '../hooks/useTasks'
-import QuadrantCell, { type QuadrantId } from './QuadrantCell'
+import QuadrantCell from './QuadrantCell'
 import './QuadrantView.css'
 
 export default function QuadrantView() {

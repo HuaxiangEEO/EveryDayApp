@@ -17,7 +17,6 @@ function isWithinNext7Days(dateStr: string): boolean {
   const todayStr = today()
   const tomorrowStr = tomorrow()
   if (dateStr <= todayStr) return false
-  const d = new Date(dateStr)
   const end = new Date()
   end.setDate(end.getDate() + 7)
   const endStr = end.toISOString().slice(0, 10)

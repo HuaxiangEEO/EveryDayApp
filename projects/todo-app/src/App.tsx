@@ -16,7 +16,7 @@ type ViewMode = 'list' | 'quadrant' | 'calendar'
 function MainApp() {
   const [currentList, setCurrentList] = useState<List | null>(null)
   const [viewMode, setViewMode] = useState<ViewMode>('list')
-  const { lists, loading, error, reload, getFilteredForList } = useTasks()
+  const { lists, loading, error, reload } = useTasks()
 
   const effectiveList = currentList ?? lists.find(l => l.type === 'all') ?? lists[0]
 
