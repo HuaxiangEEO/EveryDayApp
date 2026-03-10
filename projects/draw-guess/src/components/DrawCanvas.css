@@ -1,0 +1,120 @@
+.draw-canvas-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.draw-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.draw-colors {
+  display: flex;
+  gap: 6px;
+}
+
+.draw-color-btn {
+  width: 28px;
+  height: 28px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.draw-color-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.draw-color-btn.active {
+  border-color: #1a1a2e;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1a1a2e;
+}
+
+.draw-color-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.draw-sizes {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.draw-size-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.draw-size-btn span {
+  display: block;
+  background: #1a1a2e;
+  border-radius: 50%;
+}
+
+.draw-size-btn:hover:not(:disabled) {
+  border-color: #1a1a2e;
+  background: #f5f5f5;
+}
+
+.draw-size-btn.active {
+  border-color: #e94560;
+  background: rgba(233, 69, 96, 0.1);
+}
+
+.draw-size-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.draw-clear {
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e94560;
+  background: rgba(233, 69, 96, 0.1);
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.draw-clear:hover:not(:disabled) {
+  background: rgba(233, 69, 96, 0.2);
+  color: #c73e54;
+}
+
+.draw-clear:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.draw-canvas {
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12), inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.draw-canvas.disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}

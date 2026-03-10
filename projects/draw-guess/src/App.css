@@ -1,0 +1,237 @@
+:root {
+  --dg-bg: #fef9f3;
+  --dg-surface: #fff;
+  --dg-ink: #1a1a2e;
+  --dg-accent: #e94560;
+  --dg-accent-soft: rgba(233, 69, 96, 0.12);
+  --dg-muted: #6b6b7a;
+  --dg-border: rgba(26, 26, 46, 0.1);
+  --dg-shadow: 0 4px 24px rgba(26, 26, 46, 0.08);
+  --dg-shadow-lg: 0 12px 48px rgba(26, 26, 46, 0.12);
+}
+
+.dg-app {
+  min-height: 100vh;
+  background: var(--dg-bg);
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.dg-header {
+  padding: 24px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #fff;
+  box-shadow: var(--dg-shadow-lg);
+}
+
+.dg-title {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.08em;
+}
+
+.dg-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin: 4px 0 0;
+  letter-spacing: 0.2em;
+}
+
+.dg-score {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.dg-score strong {
+  color: #ff9f1c;
+}
+
+.dg-main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.dg-lobby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.dg-lobby-card {
+  background: var(--dg-surface);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--dg-shadow);
+  text-align: center;
+  border: 1px solid var(--dg-border);
+}
+
+.dg-lobby-card h2 {
+  font-size: 1.5rem;
+  margin: 0 0 12px;
+  color: var(--dg-ink);
+}
+
+.dg-lobby-card p {
+  color: var(--dg-muted);
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+}
+
+.dg-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.dg-word-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 16px 24px;
+  background: var(--dg-surface);
+  border-radius: 14px;
+  box-shadow: var(--dg-shadow);
+  border: 1px solid var(--dg-border);
+}
+
+.dg-word-label {
+  font-size: 0.8rem;
+  color: var(--dg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.dg-word {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1.8rem;
+  color: var(--dg-accent);
+}
+
+.dg-category {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  background: var(--dg-accent-soft);
+  color: var(--dg-accent);
+  border-radius: 20px;
+}
+
+.dg-canvas-preview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dg-guess-area {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.dg-input {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid var(--dg-border);
+  border-radius: 12px;
+  background: var(--dg-surface);
+  color: var(--dg-ink);
+  transition: border-color 0.2s;
+}
+
+.dg-input:focus {
+  outline: none;
+  border-color: var(--dg-accent);
+}
+
+.dg-input::placeholder {
+  color: var(--dg-muted);
+}
+
+.dg-result-card {
+  padding: 32px 40px;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 280px;
+}
+
+.dg-result-card.correct {
+  background: linear-gradient(135deg, rgba(46, 196, 182, 0.15) 0%, rgba(46, 196, 182, 0.05) 100%);
+  border: 1px solid rgba(46, 196, 182, 0.3);
+}
+
+.dg-result-card.wrong {
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.08) 0%, rgba(233, 69, 96, 0.02) 100%);
+  border: 1px solid rgba(233, 69, 96, 0.2);
+}
+
+.dg-result-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.dg-result-card h2 {
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+  color: var(--dg-ink);
+}
+
+.dg-result-card p {
+  margin: 0;
+  color: var(--dg-muted);
+  font-size: 0.95rem;
+}
+
+.dg-result-card p strong {
+  color: var(--dg-accent);
+}
+
+.dg-result-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.dg-btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border: none;
+  font-family: inherit;
+}
+
+.dg-btn:hover {
+  transform: translateY(-1px);
+}
+
+.dg-btn-primary {
+  background: linear-gradient(135deg, var(--dg-accent) 0%, #c73e54 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(233, 69, 96, 0.35);
+}
+
+.dg-btn-primary:hover {
+  box-shadow: 0 6px 24px rgba(233, 69, 96, 0.45);
+}
+
+.dg-btn-ghost {
+  background: transparent;
+  color: var(--dg-muted);
+  border: 1px solid var(--dg-border);
+}
+
+.dg-btn-ghost:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--dg-ink);
+}

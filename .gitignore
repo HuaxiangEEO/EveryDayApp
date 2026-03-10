@@ -25,3 +25,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Flutter
+projects/cloud-storage/.dart_tool/
+projects/cloud-storage/.packages
+projects/cloud-storage/build/
+projects/cloud-storage/*.iml

@@ -10,7 +10,9 @@
 EveryDayApp/
 ├── projects/
 │   ├── interview-questions/  # 操作系统面试题库
-│   └── chinese-chess/        # 中国象棋对战游戏
+│   ├── chinese-chess/        # 中国象棋对战游戏
+│   ├── cloud-storage/        # PC端网盘文件管理
+│   └── draw-guess/           # 你画我猜游戏
 ├── package.json              # 根目录配置
 └── README.md                # 项目说明
 ```
@@ -63,6 +65,46 @@ npm run dev
 
 **详细文档**: 查看 [README.md](projects/chinese-chess/README.md)
 
+### 3. PC端网盘文件管理 📁
+
+**位置**: `projects/cloud-storage/`
+
+基于 Flutter 开发的桌面端网盘文件管理应用，支持本地/云端文件浏览、上传、下载、新建文件夹等操作。
+
+**功能特性**:
+- 📂 本地与云端文件浏览
+- ⬆️ 文件上传、下载
+- 📁 新建文件夹
+- 🪟 Windows 桌面应用（window_manager）
+- 🎨 Material 3 深色主题
+
+**快速开始**:
+```bash
+cd projects/cloud-storage
+flutter pub get
+flutter run -d windows
+```
+
+### 4. 你画我猜游戏 🎨
+
+**位置**: `projects/draw-guess/`
+
+基于 React + TypeScript + Vite 开发的你画我猜小游戏，支持画画、猜词、多轮得分。
+
+**功能特性**:
+- 🎨 画布绘制（鼠标/触控）
+- 📝 随机题目（动物、物品、食物、动作、人物、自然、建筑等分类）
+- ✅ 猜词判定（模糊匹配）
+- 🏆 多轮计分
+- 📱 响应式布局
+
+**快速开始**:
+```bash
+cd projects/draw-guess
+npm install
+npm run dev
+```
+
 ## 快速开始
 
 ### 安装所有子项目依赖
@@ -79,6 +121,12 @@ npm run dev:interview
 
 # 运行象棋游戏
 npm run dev:chess
+
+# 运行网盘文件管理（需先 cd projects/cloud-storage && flutter pub get）
+npm run dev:cloud
+
+# 运行你画我猜
+npm run dev:draw
 ```
 
 ### 构建特定子项目
@@ -89,15 +137,18 @@ npm run build:interview
 
 # 构建象棋游戏
 npm run build:chess
+
+# 构建网盘文件管理（Windows）
+npm run build:cloud
+
+# 构建你画我猜
+npm run build:draw
 ```
 
 ## 技术栈
 
-所有子项目统一使用：
-- React 18
-- TypeScript
-- Vite
-- CSS3
+- **Web 项目**（interview-questions、chinese-chess、draw-guess）: React 18、TypeScript、Vite、CSS3
+- **桌面项目**（cloud-storage）: Flutter、Dart、Material 3
 
 ## 项目规划
 
@@ -107,8 +158,8 @@ npm run build:chess
 
 1. 每个子项目独立运行，互不干扰
 2. 共享的配置和工具放在根目录
-3. 子项目使用独立的package.json和构建配置
-4. 代码风格保持一致（TypeScript + React）
+3. 子项目使用独立的 package.json/pubspec.yaml 和构建配置
+4. Web 项目统一 React + TypeScript，桌面项目使用 Flutter
 
 
 ## 贡献

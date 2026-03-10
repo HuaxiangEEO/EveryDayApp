@@ -9,11 +9,15 @@
     "dev:chess": "cd projects/chinese-chess && npm run dev",
     "dev:edu": "cd projects/edu-platform && npm run dev",
     "dev:todo": "cd projects/todo-app && npm run dev",
+    "dev:cloud": "cd projects/cloud-storage && flutter run -d windows",
+    "dev:draw": "cd projects/draw-guess && npm run dev",
     "build:interview": "cd projects/interview-questions && npm run build",
     "build:chess": "cd projects/chinese-chess && npm run build",
     "build:edu": "cd projects/edu-platform && npm run build",
     "build:todo": "cd projects/todo-app && npm run build",
-    "install:all": "cd projects/interview-questions && npm install && cd ../chinese-chess && npm install && cd ../edu-platform && npm install && cd ../todo-app && npm install"
+    "build:cloud": "cd projects/cloud-storage && flutter build windows",
+    "build:draw": "cd projects/draw-guess && npm run build",
+    "install:all": "cd projects/interview-questions && npm install && cd ../chinese-chess && npm install && cd ../edu-platform && npm install && cd ../todo-app && npm install && cd ../draw-guess && npm install"
   },
   "workspaces": [
     "projects/*"
