@@ -1,0 +1,64 @@
+.panel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.label {
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 22px;
+  padding: 2px 4px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cell.zero {
+  opacity: 0.4;
+}
+
+.cell.danger {
+  background: rgba(242, 201, 76, 0.18);
+}
+
+.cell.gone {
+  background: rgba(80, 80, 80, 0.4);
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: line-through;
+}
+
+.rank {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.count {
+  font-size: 10px;
+  color: var(--gold);
+}
+
+.cell.gone .count {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 720px) {
+  .panel {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  .cell {
+    min-width: 20px;
+  }
+}

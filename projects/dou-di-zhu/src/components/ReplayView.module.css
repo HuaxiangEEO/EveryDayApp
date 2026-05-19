@@ -1,0 +1,96 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 480px;
+  max-width: 720px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  min-width: 56px;
+  text-align: right;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  flex: 1;
+  min-height: 56px;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cards.empty {
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.45);
+  font-style: italic;
+}
+
+.actionBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.range {
+  flex: 1;
+}
+
+.stepLabel {
+  font-size: 12px;
+  color: var(--gold);
+  min-width: 70px;
+  text-align: center;
+}
+
+.moveLog {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.moveLog .seatTag {
+  font-weight: 700;
+  color: var(--gold);
+  margin-right: 6px;
+}
+
+.summary {
+  padding: 8px 12px;
+  background: rgba(242, 201, 76, 0.12);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--gold);
+}

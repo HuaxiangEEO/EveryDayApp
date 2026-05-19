@@ -1,0 +1,95 @@
+.wrap {
+  min-width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty {
+  padding: 28px 12px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--gold);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.headline {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.headline.win {
+  color: var(--gold);
+}
+
+.headline.lose {
+  color: #ff8888;
+}
+
+.sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete {
+  background: rgba(211, 58, 58, 0.6);
+  color: var(--white);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete:hover {
+  background: #e54d4d;
+}
+
+.tools {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dangerBtn {
+  background: rgba(255, 100, 100, 0.2);
+  color: #ff8888;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.dangerBtn:hover {
+  background: rgba(255, 100, 100, 0.35);
+}

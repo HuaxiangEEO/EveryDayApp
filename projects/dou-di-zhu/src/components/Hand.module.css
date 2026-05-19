@@ -1,0 +1,40 @@
+.hand {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 28px 8px 12px;
+  min-height: 120px;
+}
+
+.slot {
+  position: relative;
+  width: 28px; /* 重叠步进 */
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.slot:last-child {
+  width: 56px;
+}
+
+.slot > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 720px) {
+  .hand {
+    padding: 24px 4px 8px;
+    min-height: 90px;
+    overflow-x: auto;
+  }
+  .slot {
+    width: 22px;
+    height: 56px;
+  }
+  .slot:last-child {
+    width: 36px;
+  }
+}

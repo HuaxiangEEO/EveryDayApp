@@ -12,7 +12,8 @@ EveryDayApp/
 │   ├── interview-questions/  # 操作系统面试题库
 │   ├── chinese-chess/        # 中国象棋对战游戏
 │   ├── cloud-storage/        # PC端网盘文件管理
-│   └── draw-guess/           # 你画我猜游戏
+│   ├── draw-guess/           # 你画我猜游戏
+│   └── dou-di-zhu/           # 斗地主单机对战
 ├── package.json              # 根目录配置
 └── README.md                # 项目说明
 ```
@@ -105,6 +106,33 @@ npm install
 npm run dev
 ```
 
+### 5. 斗地主 · 单机对战 🃏
+
+**位置**: `projects/dou-di-zhu/`
+
+基于 React + TypeScript + Vite 开发的标准三人斗地主，玩家 vs 2 个 AI。
+
+**功能特性 (v1.2)**:
+- 🃏 完整 54 张牌 + 标准叫分制（1/2/3）
+- 🎯 完整牌型识别：单/对/三、三带、顺子、连对、飞机（纯/带单/带对）、四带二、炸弹、王炸
+- 🤖 AI 三档难度，**困难 AI 启用「前瞻一步」模拟评估**
+- 💡 **智能提示**：用 hard AI 推荐 Top 8 候选，重复点击循环
+- 🔥 完整结算：底分 × 炸弹翻倍 × 春天/反春翻倍
+- 📝 实时记牌器、💾 自动多局保存 + 复盘、📊 统计面板
+- 🎮 残局训练 + **自定义残局编辑器**（点击牌循环归属，保存到本地）
+- 🎨 三套主题：经典绿桌 / 暗夜 / 红木
+- ✨ **出牌动画**（飞入 + 弹跳）+ **Web Audio 合成音效**（出牌/不要/炸弹/王炸/胜负）
+- 🎵 音效开关、出牌校验、不要按钮、响应式布局
+
+**快速开始**:
+```bash
+cd projects/dou-di-zhu
+npm install
+npm run dev
+```
+
+**详细文档**: 查看 [README.md](projects/dou-di-zhu/README.md)
+
 ## 快速开始
 
 ### 安装所有子项目依赖
@@ -127,6 +155,9 @@ npm run dev:cloud
 
 # 运行你画我猜
 npm run dev:draw
+
+# 运行斗地主
+npm run dev:landlord
 ```
 
 ### 构建特定子项目
@@ -143,11 +174,14 @@ npm run build:cloud
 
 # 构建你画我猜
 npm run build:draw
+
+# 构建斗地主
+npm run build:landlord
 ```
 
 ## 技术栈
 
-- **Web 项目**（interview-questions、chinese-chess、draw-guess）: React 18、TypeScript、Vite、CSS3
+- **Web 项目**（interview-questions、chinese-chess、draw-guess、dou-di-zhu）: React 18、TypeScript、Vite、CSS3
 - **桌面项目**（cloud-storage）: Flutter、Dart、Material 3
 
 ## 项目规划
